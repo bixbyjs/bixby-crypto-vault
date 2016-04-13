@@ -16,6 +16,7 @@
   ],
   "main": "./lib",
   "dependencies": {
+    "canonical-path": "0.0.2",
     "iso8601-convert": "^1.0.0"
   },
   "devDependencies": {
