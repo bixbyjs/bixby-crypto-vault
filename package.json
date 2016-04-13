@@ -22,5 +22,8 @@
   },
   "scripts": {
     "test": "node_modules/.bin/mocha test/*.test.js"
+  },
+  "dependencies": {
+    "iso8601-convert": "^1.0.0"
   }
 }
