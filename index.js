@@ -1,6 +1,6 @@
 exports = module.exports = function pki_vault(id) {
   var map = {
-    'keystore': './keystore'
+    'keyring': './xom/keyring'
   };
   
   var mid = map[id];
@@ -10,5 +10,5 @@ exports = module.exports = function pki_vault(id) {
 };
 
 exports.used = function(container) {
-  container.add('keystore');
+  container.add('keyring');
 };
