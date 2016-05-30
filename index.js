@@ -1,4 +1,4 @@
-exports = module.exports = function pki_vault(id) {
+exports = module.exports = function crypto_vault(id) {
   var map = {
     'keyring': './xom/keyring'
   };

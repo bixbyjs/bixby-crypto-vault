@@ -1,5 +1,5 @@
-exports = module.exports = function(settings, client) {
-  var KeyStore = require('../lib/keyring');
+exports = module.exports = function(client, settings) {
+  var Keyring = require('../lib/keyring');
   
   
   settings = settings.isolate(this.baseNS);
@@ -8,10 +8,13 @@ exports = module.exports = function(settings, client) {
     path: settings.get('keystore/path')
   };
   
-  var keystore = new KeyStore(client, options);
-  return keystore;
+  var keyring = new Keyring(client, options);
+  return keyring;
 }
 
 exports['@implements'] = 'http://i.bixbyjs.org/crypto/Keyring';
 exports['@singleton'] = true;
-exports['@require'] = [ 'http://i.bixbyjs.org/Settings', 'http://i.bixbyjs.org/opt/vault/Client/0' ];
+exports['@require'] = [
+  'http://i.bixbyjs.org/opt/vault/Client/0',
+  'http://i.bixbyjs.org/Settings'
+];
